@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
+@viewport {
+   width: device-width; /* largeur du viewport */
+    height: device-height;
+   zoom: 1; /* zoom initial à 1.0 (et clin d'oeil aux fans d'IE6/7) */
+}
+
 * {
     border: 0;
     margin: 0;
@@ -69,7 +75,7 @@ body#homepage {
     color: white;
     font-size: 28px;
     text-align: center;
-    
+    font-weight: 400;
 }
 
 
