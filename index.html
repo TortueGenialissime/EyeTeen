@@ -4,7 +4,6 @@
   <meta charset="utf-8">
   <title>Titre de la page</title>
   <link rel="stylesheet" href="css/style.css">
-  <script src="script.js"></script>
 </head>
 <body id="homepage">
     <div id="homepage-background">
@@ -55,6 +54,10 @@
             document.querySelector("body").style.height = wHeight+"px";
         }
         window.onResize();
+        window.addEventListener("resize", function(){
+            var wHeight = window.innerHeight;
+            document.querySelector("body").style.height = wHeight+"px";
+        });
     </script>
 </body>
 </html>
