@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
 @viewport {
-   width: device-width; /* largeur du viewport */
+    width: device-width; /* largeur du viewport */
     height: device-height;
-   zoom: 1; /* zoom initial à 1.0 (et clin d'oeil aux fans d'IE6/7) */
+    zoom: 1; /* zoom initial à 1.0 (et clin d'oeil aux fans d'IE6/7) */
 }
 
 * {
@@ -13,6 +13,10 @@
     border-radius: 0;
     font-family: 'Lato', sans-serif;
     box-sizing: border-box;
+}
+
+a {
+    font-size: 11px;
 }
 
 *:focus {
@@ -33,12 +37,11 @@ body#homepage {
 #homepage-background{
     background: url(../img/teens-bkg.jpg) no-repeat center fixed;
     background-size: cover;
-height: calc(100% + 10px);
-width: calc(100% + 10px);
-position: fixed;
-filter: blur(2px);
-left: -5px;
-top: -5px;
+    height: calc(100% + 10px);
+    width: calc(100% + 10px);
+    position: fixed;
+    left: -5px;
+    top: -5px;
 }
 
 #homepage-background:after {
@@ -60,6 +63,7 @@ top: -5px;
     z-index: 3;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 #homepage header {
@@ -76,8 +80,8 @@ top: -5px;
 
 #homepage #container #presentation {
     width: 700px;
-    margin-bottom: 55px;
-    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-top: 55px;
 }
 
 #homepage #container #presentation h1 {
@@ -106,6 +110,35 @@ top: -5px;
     display: flex;
     height: 100%;
     position: relative;
+}
+.or-method-login {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    color: #555;
+    font-size: 10px;
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+}
+.or-method-login:before {
+content: "";
+position: absolute;
+width: calc(50% - 20px);
+left: 0;
+top: 6px;
+height: 1px;
+background: #333;
+}
+
+.or-method-login:after {
+content: "";
+position: absolute;
+width: calc(50% - 20px);
+right: 0;
+top: 6px;
+height: 1px;
+background: #333;
 }
 
 
@@ -136,8 +169,8 @@ top: -5px;
 
 .box {
     width: 100%;
-    height: 300px;
-    background: rgba(0,0,0,0.6);
+    padding: 30px 0;
+    background: rgba(0,0,0,0.8);
     position:relative;
     left: 0;
     transition: left .4s;
@@ -157,6 +190,9 @@ top: -5px;
     font-size: 0;
     margin-bottom: 20px;
 }
+.box form .input-label:first-of-type{
+    margin-top: 20px;
+}
 
 .box form .input-label:nth-of-type(3){
     width: 100%;
@@ -173,14 +209,14 @@ top: -5px;
 
 .box form .input-label label{
     display: inline-block;
-    width:40%;
+    width: 36%;
     color: #fff;
-    text-align: center;
+    text-align: right;
     font-size: 16px;
-    height:40px;
+    height: 40px;
     vertical-align: top;
     line-height: 41px;
-
+    padding-right: 25px;
 }
 
 
@@ -190,29 +226,104 @@ top: -5px;
     border: 2px solid #2ab576;
     height: 40px;
     border-radius: 2px;
-    width: 50%;
+    width: 54%;
     padding-left: 15px;
     font-size: 16px;
     color: #fff;
     transition: 0.2s;
 }
+.forgot-password {
+    width: 80%;
+    margin: 0 auto;
+    text-align: right;
+    padding-top: 8px;
+}
 
+
+.forgot-password a{
+    text-decoration: none;
+    color: #ddd;
+    position: relative;
+}
+
+.forgot-password a:before{
+    content: "i";
+    position: relative;
+    display: inline-block;
+    font-size: 10px;
+    font-style: italic;
+    padding: 0px 6px 0px 5px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    text-align: center;
+    color: #ddd;
+    margin-right: 5px;
+    top: -1px;
+}
+
+
+
+.forgot-password a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+.forgot-password a:hover:before {
+    color: #fff;
+    border: 1px solid #fff;
+}
 .box form .input-label input[type=submit]{
-        appearance:none;
+    appearance:none;
     -webkit-appearance: none;
     -webkit-border-radius:0; 
     border-radius:0;
-    width: 110px;
-    font-size: 14px;
+    width: 120px;
+    font-size: 13px;
     padding-left: 0;
     text-align: center;
     background: #2ab576;
 }
 
-.box form .input-label input:focus{
+.box form .input-label input[type=text]:focus, .box form .input-label input[type=password]:focus{
     border-left: 20px solid #2ab576;
 }
 
 #signup-box {
     display: none;
+}
+#facebook-connect {
+    display: inline-block;
+    width: 40%;
+    height: 40px;
+    border-radius: 3px;
+    background-color: #3b5998;
+    color: white;
+    font-size: 13px;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.2s;
+}
+#facebook-connect:hover {
+    background-color: #2C4372;
+}
+#facebook-connect:hover img {
+    box-shadow: 3px 0px 7px rgba(0,0,0,0.2);
+}
+
+#facebook-connect img {
+    transition: 0.2s;
+    height: 100%;
+    padding: 5px 10px 5px 10px;
+    border-right: 1px solid #2C4372;
+    line-height: 40px;
+    box-shadow: 0px 0px 0px rgba(0,0,0,0.2);
+}
+#facebook-connect span {
+    height: 100%;
+    display: inline-block;
+    line-height: 40px;
+    position: relative;
+    top: -14px;
+    text-align: center;
+    width: 75%;
 }
