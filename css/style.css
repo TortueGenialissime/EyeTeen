@@ -121,6 +121,17 @@ body#homepage {
     margin-top: 20px;
     position: relative;
 }
+
+.infos-perso {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    color: #555;
+    font-size: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+}
 .or-method-login:before {
 content: "";
 position: absolute;
@@ -135,6 +146,25 @@ background: #333;
 content: "";
 position: absolute;
 width: calc(50% - 20px);
+right: 0;
+top: 6px;
+height: 1px;
+background: #333;
+}
+.infos-perso:before {
+content: "";
+position: absolute;
+width: calc(50% - 70px);
+left: 0;
+top: 6px;
+height: 1px;
+background: #333;
+}
+
+.infos-perso:after {
+content: "";
+position: absolute;
+width: calc(50% - 70px);
 right: 0;
 top: 6px;
 height: 1px;
@@ -194,7 +224,7 @@ background: #333;
     margin-top: 20px;
 }
 
-.box form .input-label:nth-of-type(3){
+.box form .input-label:nth-of-type(9){
     width: 100%;
     font-size: 0;
     margin-bottom: 20px;
@@ -232,6 +262,34 @@ background: #333;
     color: #fff;
     transition: 0.2s;
 }
+
+.box form .input-label select{
+    appearance:none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: none;
+    display: inline-block;
+    border: 2px solid #2ab576;
+    height: 40px;
+    border-radius: 2px;
+    width: 20%;
+    font-size: 16px;
+    color: #fff;
+    transition: 0.2s;
+    text-align: center;
+    position: relative;
+}
+.box form .input-label select:before{
+    content: "";
+    position: absolute;
+    height: 40px;
+    top: 0;
+    right: 0;
+    width: 20px;
+    z-index: 44545;
+    background: #2ab576;
+}
+
 .forgot-password {
     width: 80%;
     margin: 0 auto;
