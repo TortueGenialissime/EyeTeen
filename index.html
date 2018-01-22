@@ -4,6 +4,8 @@
   <meta charset="utf-8">
   <title>Titre de la page</title>
   <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.3.1.min.js" type="text/javascript">
+    </script>
 </head>
 <body id="homepage">
     <div id="homepage-background">
@@ -21,14 +23,30 @@
         <div id="wrap">
             <nav id="social-nav">
                 <ul>
-                    <span id="active-tab">
-                    </span>
-                    <li class="">Se connecter</li>
-                    <li>S'inscrire</li>
+                    <span id="active-tab"></span>
+                    <li data-action="login" class="">Se connecter</li>
+                    <li data-action="signup">S'inscrire</li>
                 </ul>
             </nav>
             <div id="login-sign">
-                <div id="login-box">
+                <div class="box" id="login-box">
+                    <form method="post">
+                        <div class="input-label">
+                            <label for="email">Email</label>
+                            <input name="email" type="text"
+                                   spellcheck="false">
+                        </div>
+                        <div class="input-label">
+                            <label for="password">Mot de passe</label>
+                            <input name="password" type="password">
+                        </div>
+                         <div class="input-label">
+                            <label></label>
+                            <input type="submit" value="CONNEXION">
+                        </div>
+                    </form>
+                </div>                
+                <div class="box" id="signup-box">
                     <form method="post">
                         <div class="input-label">
                             <label for="email">Email</label>
@@ -48,16 +66,18 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript">
+<!--    <script type="text/javascript">
         function onResize() {
             var wHeight = window.innerHeight;
-            document.querySelector("body").style.height = wHeight+"px";
+            document.querySelector("body").style.minHeight = wHeight+"px";
         }
         window.onResize();
         window.addEventListener("resize", function(){
             var wHeight = window.innerHeight;
-            document.querySelector("body").style.height = wHeight+"px";
+            document.querySelector("body").style.minHeight = wHeight+"px";
         });
+    </script>-->
+    <script src="js/nav-homepage.js" type="text/javascript">
     </script>
 </body>
 </html>

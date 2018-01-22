@@ -33,10 +33,12 @@ body#homepage {
 #homepage-background{
     background: url(../img/teens-bkg.jpg) no-repeat center fixed;
     background-size: cover;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    filter: blur(2px) grayscale(30%);
+height: calc(100% + 10px);
+width: calc(100% + 10px);
+position: fixed;
+filter: blur(2px);
+left: -5px;
+top: -5px;
 }
 
 #homepage-background:after {
@@ -52,7 +54,6 @@ body#homepage {
 
 #homepage #container {
     width: 100%;
-    height: calc(100% - 130px);
     display: flex;
     flex-direction: column;
     position: relative;
@@ -65,21 +66,23 @@ body#homepage {
     flex-shrink: 0;
     width: 100%;
     position: relative;
+    padding-top: 10px;
+    padding-left: 4px;
 }
 #homepage header img {
     height: 100%;
-    padding: 10px;
-    height: 125px;
+    height: 100px;
 }
 
 #homepage #container #presentation {
     width: 700px;
     margin-bottom: 55px;
+    margin-top: 30px;
 }
 
 #homepage #container #presentation h1 {
     color: white;
-    font-size: 28px;
+    font-size: 26px;
     text-align: center;
     font-weight: 400;
 }
@@ -89,7 +92,6 @@ body#homepage {
 
 #homepage #container #wrap {
     width: 450px;
-    height: 300px;
 }
 
 
@@ -130,20 +132,18 @@ body#homepage {
 }
 
 
-#homepage #container #wrap #social-nav ul li:hover {
-    background: rgba(0,0,0,0.6);
-}
 
 
-
-
-#login-box {
+.box {
     width: 100%;
     height: 300px;
-    background: rgba(0,0,0,0.6)
+    background: rgba(0,0,0,0.6);
+    position:relative;
+    left: 0;
+    transition: left .4s;
 }
 
-#login-box form {
+.box form {
     display: flex;
     height: 100%;
     align-items: center;
@@ -152,13 +152,13 @@ body#homepage {
     align-content: center;
 }
 
-#login-box form .input-label{
+.box form .input-label{
     width: 100%;
     font-size: 0;
     margin-bottom: 20px;
 }
 
-#login-box form .input-label:nth-of-type(3){
+.box form .input-label:nth-of-type(3){
     width: 100%;
     font-size: 0;
     margin-bottom: 20px;
@@ -167,11 +167,11 @@ body#homepage {
 }
 
 
-#login-box form .input-label:last-of-type{
+.box form .input-label:last-of-type{
     margin-bottom: 0;
 }
 
-#login-box form .input-label label{
+.box form .input-label label{
     display: inline-block;
     width:40%;
     color: #fff;
@@ -184,7 +184,7 @@ body#homepage {
 }
 
 
-#login-box form .input-label input{
+.box form .input-label input{
     background: none;
     display: inline-block;
     border: 2px solid #2ab576;
@@ -197,7 +197,7 @@ body#homepage {
     transition: 0.2s;
 }
 
-#login-box form .input-label input[type=submit]{
+.box form .input-label input[type=submit]{
         appearance:none;
     -webkit-appearance: none;
     -webkit-border-radius:0; 
@@ -209,8 +209,10 @@ body#homepage {
     background: #2ab576;
 }
 
-#login-box form .input-label input:focus{
+.box form .input-label input:focus{
     border-left: 20px solid #2ab576;
 }
 
-
+#signup-box {
+    display: none;
+}
