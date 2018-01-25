@@ -291,7 +291,7 @@ background: #333;
     background: #2ab576;
 }
 
-        #result{
+#result{
             display: none;
             float: right;
             margin-right: 11%;
@@ -300,7 +300,7 @@ background: #333;
             overflow: hidden;
             position: relative;
         }
-        #result ul {
+#result ul {
             position: absolute;
             top: 0;
             bottom: 0;
@@ -308,7 +308,7 @@ background: #333;
             right: -17px;
             overflow-y: scroll;
         }
-        #result ul li {
+#result ul li {
             padding: 10px 0;
             color: #2ab576;
             text-align: center;
