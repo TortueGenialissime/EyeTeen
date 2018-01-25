@@ -6,6 +6,10 @@
     zoom: 1; /* zoom initial à 1.0 (et clin d'oeil aux fans d'IE6/7) */
 }
 
+body {
+    display: table;
+}
+
 * {
     border: 0;
     margin: 0;
@@ -33,7 +37,7 @@ input {
 
 body#homepage {
     width: 100%;
-    min-height: 500px;
+    height:100vh;
 }
 
 #homepage-background{
@@ -81,7 +85,7 @@ body#homepage {
 }
 
 #homepage #container #presentation {
-    width: 700px;
+    max-width: 700px;
     margin-bottom: 30px;
     margin-top: 55px;
 }
@@ -292,30 +296,30 @@ background: #333;
 }
 
 #result{
-            display: none;
-            float: right;
-            margin-right: 11%;
-            width: 54%;
-            box-sizing: border-box;
-            overflow: hidden;
-            position: relative;
-        }
+    display: none;
+    float: right;
+    margin-right: 11%;
+    width: 54%;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+}
 #result ul {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: -17px;
-            overflow-y: scroll;
-        }
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: -17px;
+    overflow-y: scroll;
+}
 #result ul li {
-            padding: 10px 0;
-            color: #2ab576;
-            text-align: center;
-            list-style: none;
-            font-size: 12px;
-            cursor: pointer;
-        }
+    padding: 10px 0;
+    color: #2ab576;
+    text-align: center;
+    list-style: none;
+    font-size: 12px;
+    cursor: pointer;
+}
 
 .forgot-password {
     width: 80%;
@@ -411,4 +415,31 @@ background: #333;
     top: -14px;
     text-align: center;
     width: 75%;
+}
+
+footer.footer-about {
+    height: 75px;
+    position: relative;
+    z-index: 3;
+    display: table-row;
+}   
+.footer-about-container {
+    height: 40px;
+    max-width: 750px;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+.nav-footer ul {
+    display: flex; 
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.nav-footer ul li {
+    list-style: none;
+}
+
+.nav-footer ul li a {
+    color: #fff;
+    text-decoration: none;
 }
