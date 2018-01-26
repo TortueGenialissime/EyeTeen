@@ -1,14 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
-@media handheld {
- html { overflow: scroll; }
-    body{
-        display: block;
-        height: auto;
-    }
-    .footer-about-container {
-    margin-top: 30px;
-}
-}
 body {
     display: table;
     height: 100vh;
@@ -479,4 +469,14 @@ footer.footer-about {
     .or-method-login~.input-label{
         margin-top: 0 !important;
     }
+}
+@media handheld {
+ html { overflow: scroll; }
+    body{
+        display: block;
+        height: auto;
+    }
+    .footer-about-container {
+    margin-top: 0px !important;
+}
 }
