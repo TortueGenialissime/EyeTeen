@@ -479,4 +479,8 @@ footer.footer-about {
     .footer-about-container {
     margin-top: 0px !important;
 }
+    footer.footer-about {
+    z-index: 99999;
+    display: block;
+    }
 }
