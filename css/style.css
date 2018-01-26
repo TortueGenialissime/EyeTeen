@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
+@media handheld {
+ html { overflow: scroll; }   
+}
 body {
     display: table;
 }

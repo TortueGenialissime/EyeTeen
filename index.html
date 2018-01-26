@@ -138,7 +138,8 @@
     <script type="text/javascript">
        function onResize() {
            var wHeight = window.innerHeight;
-           document.querySelector("body").style.height = wHeight+"px";
+           document.querySelector("body").style.height = "100vh";
+           document.querySelector("body").style.minHeight = "80vh";
        }
        window.onResize();
     </script>
