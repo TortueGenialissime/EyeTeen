@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 @media handheld {
  html { overflow: scroll; }
+    body{
+        display: block;
+        height: auto;
+    }
     .footer-about-container {
-    margin-top: 20px;
+    margin-top: 30px;
 }
 }
 body {
     display: table;
+    height: 100vh;
 }
 
 * {
