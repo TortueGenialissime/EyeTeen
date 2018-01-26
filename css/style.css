@@ -471,17 +471,3 @@ footer.footer-about {
         margin-top: 0 !important;
     }
 }
-@media handheld {
- html { overflow: scroll; }
-    body{
-        display: block;
-        height: auto;
-    }
-    .footer-about-container {
-    margin-top: 0px !important;
-}
-    footer.footer-about {
-    z-index: 99999;
-    display: block;
-    }
-}
