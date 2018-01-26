@@ -416,6 +416,7 @@ footer.footer-about {
     display: flex; 
     justify-content: space-between;
     padding: 0 20px;
+    flex-wrap: wrap;
 }
 
 .nav-footer ul li {
@@ -426,7 +427,17 @@ footer.footer-about {
     color: #fff;
     text-decoration: none;
 }
-
+@media(max-width: 500px){
+    .nav-footer ul {
+    justify-content: center;
+    }
+    .nav-footer ul li {
+        margin-right: 10px;
+    }
+    .footer-about-container {
+    margin-top: 15px;
+}
+}
 @media(max-width: 470px){
     #homepage header {
         text-align: center;
