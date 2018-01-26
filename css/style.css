@@ -1,11 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
-
-@viewport {
-    width: device-width; /* largeur du viewport */
-    height: device-height;
-    zoom: 1; /* zoom initial à 1.0 (et clin d'oeil aux fans d'IE6/7) */
-}
-
 body {
     display: table;
 }
@@ -95,13 +88,14 @@ body#homepage {
     font-size: 26px;
     text-align: center;
     font-weight: 400;
+    padding: 0 10px;
 }
 
 
 
 
 #homepage #container #wrap {
-    width: 450px;
+    max-width: 450px;
 }
 
 
@@ -281,18 +275,8 @@ background: #333;
     font-size: 16px;
     color: #fff;
     transition: 0.2s;
-    text-align: center;
     position: relative;
-}
-.box form .input-label select:before{
-    content: "";
-    position: absolute;
-    height: 40px;
-    top: 0;
-    right: 0;
-    width: 20px;
-    z-index: 44545;
-    background: #2ab576;
+    padding-left: 15px;
 }
 
 #result{
@@ -391,6 +375,7 @@ background: #333;
     text-align: left;
     cursor: pointer;
     transition: 0.2s;
+    min-width: 180px;
 }
 #facebook-connect:hover {
     background-color: #2C4372;
@@ -442,4 +427,45 @@ footer.footer-about {
 .nav-footer ul li a {
     color: #fff;
     text-decoration: none;
+}
+
+@media(max-width: 470px){
+    #homepage header {
+        text-align: center;
+    }   
+    #homepage header img {
+        height: 75px;
+    }   
+    #homepage #container #wrap {
+        padding: 0 10px;
+    }
+    #homepage #container #presentation h1 {
+        font-size: 5.5vw;
+    }
+    #homepage #container #wrap #social-nav ul li{
+        font-size: 3.5vw;
+    }
+    .box form .input-label{
+        text-align: center;
+    }
+    
+    .box form .input-label[data-type=select]{
+        text-align: left;
+    }
+    .box form .input-label[data-type=select] label{
+        width: 100%;
+        padding: 0 10%;
+    }
+    
+    .box form .input-label[data-type=select] select {
+        width: 100%;
+        margin-left: 10%;
+        max-width: 90px;
+    }
+    .box form .input-label label, .box form .input-label input {
+        width: 80%;
+        text-align: left;
+    }
+    
+    
 }
