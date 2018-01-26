@@ -275,7 +275,16 @@ background: #333;
     position: relative;
     padding-left: 15px;
 }
-
+select {
+    outline: none;
+}
+select option {
+    outline: none;
+    height: 50px;
+    color: #2ab576;
+    background: black;
+    padding: 10px 0;
+}
 #result{
     display: none;
     float: right;
@@ -414,17 +423,22 @@ footer.footer-about {
 }
 .nav-footer ul {
     display: flex; 
-    justify-content: space-between;
+    justify-content: center;
     padding: 0 20px;
     flex-wrap: wrap;
 }
 
 .nav-footer ul li {
     list-style: none;
+    margin-right: 10px;
+}
+
+.nav-footer ul li:last-of-type {
+    margin-right: 0;
 }
 
 .nav-footer ul li a {
-    color: #fff;
+    color: #ddd;
     text-decoration: none;
 }
 @media(max-width: 500px){
