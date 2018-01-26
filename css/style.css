@@ -410,6 +410,7 @@ footer.footer-about {
     max-width: 750px;
     margin: 0 auto;
     margin-top: 60px;
+    position: relative;
 }
 .nav-footer ul {
     display: flex; 
