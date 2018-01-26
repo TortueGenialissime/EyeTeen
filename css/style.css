@@ -91,9 +91,6 @@ body#homepage {
     padding: 0 10px;
 }
 
-
-
-
 #homepage #container #wrap {
     max-width: 450px;
 }
@@ -466,6 +463,13 @@ footer.footer-about {
         width: 80%;
         text-align: left;
     }
+    .infos-perso {
+        margin-top: 20px;
+    }
+    .or-method-login~.input-label{
+        margin-top: 0 !important;
+    }
+
     
     
 }
